@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %} Blogs {% endblock %}
+{% block index_content %}
+<p> Route Setup</p>
+<p> Template Rendered based on function called by Route</p>
+<p> Different App-Created</p>
+<p> New Model Created</p>
+<p> DB Migrated</p>
+
+{% for blog in blogs %}
+<a href='/blog/{{blog.id}}'> {{blog.title}}</a>
+{% endfor %}
+{% block javascript %}
+	<script src='{% static "myjs/blog.js" %}'> </script>
+{% endblock %}
+
+<button class='btn btn-default' type='button' id='create_new_blog_button'> Create Blog</button>
+
+<div class='col-md-6 col-md-offset-3' id='blog_form_div'>
+	
+</div>
+{% endblock %}

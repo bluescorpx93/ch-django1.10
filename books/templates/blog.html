@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %} Blog {{ blog.id}} {% endblock %}
+{% block index_content %}
+<p> New Route Setup</p>
+<p> Template Rendered based on function called by Route</p>
+<p> Different App-Created</p>
+<p> Accessing blog objects from DB by ID</p>
+
+<h3> {{ blog.title}}</h3>
+<img src = '{{blog.image}}' />
+<hr>
+<a href='/blog'> Back</a>
+{% endblock %}
